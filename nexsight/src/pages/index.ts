@@ -1,0 +1,10 @@
+export { default as AboutUs } from "./AboutUs";
+export { default as Contact } from "./Contact";
+export { default as FAQ } from "./FAQ";
+export { default as Landing } from "./Landing";
+export { default as Media } from "./Media";
+export { default as News } from "./News";
+export { default as ProductDetails } from "./ProductDetails";
+export { default as Products } from "./Products";
+export { default as Solutions } from "./Solutions";
+export { default as Support } from "./Support";
