@@ -141,7 +141,6 @@ const Solutions = () => {
           )}
         </Box>
       </Container>
-
       <Toolbar />
     </>
   );
