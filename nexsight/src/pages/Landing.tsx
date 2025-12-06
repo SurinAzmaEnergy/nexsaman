@@ -1,12 +1,16 @@
 import type { ReactNode } from "react";
 import { Box, useTheme, useMediaQuery } from "@mui/material";
-// import { Hero, SwiperSection } from "../components";
+import { HeroSlider, Description0, Description1 } from "../components";
 
 type Section = {
   component: ReactNode;
 };
 
-const sections: Section[] = [{ component: <></> }, { component: <></> }];
+const sections: Section[] = [
+  { component: <HeroSlider /> },
+  { component: <Description1 /> },
+  { component: <Description0 /> },
+];
 
 const Landing = () => {
   const theme = useTheme();
