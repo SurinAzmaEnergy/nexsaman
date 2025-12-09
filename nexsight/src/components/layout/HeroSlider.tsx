@@ -6,6 +6,9 @@ import {
   // LocalShipping,
   Public,
   VideoCameraFrontOutlined,
+  StoreMallDirectory,
+  Elderly,
+  DirectionsBus,
 } from "@mui/icons-material";
 import {
   Box,
@@ -17,15 +20,15 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import SwipeableViews from "react-swipeable-views";
-import CustomButton from "../ui/CustomButton";
-import { Link } from "react-router";
+// import CustomButton from "../ui/CustomButton";
+// import { Link } from "react-router";
 
 const HeroSlider = () => {
   const theme = useTheme();
   const isMdDown = useMediaQuery(theme.breakpoints.down("md"));
   const [index, setIndex] = useState(0);
 
-  const totalSlides = 6;
+  const totalSlides = 8;
   const nextSlide = () =>
     setIndex((prev) => Math.min(prev + 1, totalSlides - 1));
   const prevSlide = () => setIndex((prev) => Math.max(prev - 1, 0));
@@ -33,7 +36,7 @@ const HeroSlider = () => {
   const slidesData = [
     {
       bg: "/assets/images_1.png",
-      text: "راهکارهای تحلیل ویدئویی\nمبتنی بر هوش مصنوعی",
+      text: "راهکارهای تحلیل ویدئویی مبتنی بر هوش مصنوعی",
       Icon: Security,
     },
     {
@@ -47,9 +50,24 @@ const HeroSlider = () => {
       Icon: Construction,
     },
     {
+      bg: "/assets/images_4.png",
+      text: "مدیریت کارآمد فروشگاه",
+      Icon: StoreMallDirectory, // بهترین انتخاب برای مدیریت فروشگاه
+    },
+    {
+      bg: "/assets/images_5.png",
+      text: "مدیریت خانه سالمندان",
+      Icon: Elderly, // آیکون مخصوص سالمندان
+    },
+    {
       bg: "/assets/images_6.png",
       text: "مدیریت ایمنی عمومی",
       Icon: Public,
+    },
+    {
+      bg: "/assets/images_7.png",
+      text: "سامانه حمل‌ونقل هوشمند",
+      Icon: DirectionsBus, // مناسب‌ترین آیکون حمل‌ونقل هوشمند
     },
   ];
 
@@ -106,34 +124,6 @@ const HeroSlider = () => {
               }}
             />
           </Box>
-        </Box>
-
-        {/* Slide 2: Diagram + Button */}
-        <Box
-          sx={{
-            height: "100%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            flexDirection: "column",
-            gap: 1,
-          }}
-        >
-          <Box
-            component="img"
-            src="/assets/hero_diagram.jpg"
-            alt="diagram"
-            sx={{ maxWidth: "80%", borderRadius: 2 }}
-          />
-          <CustomButton
-            variant="contained"
-            color="secondary"
-            disableElevation
-            component={Link}
-            to="/products"
-          >
-            مشاهده محصولات
-          </CustomButton>
         </Box>
 
         {/* Slides with background + icon + text */}

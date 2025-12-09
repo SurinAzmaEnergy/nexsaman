@@ -1,6 +1,12 @@
 import type { ReactNode } from "react";
 import { Box, useTheme, useMediaQuery } from "@mui/material";
-import { HeroSlider, Description0, Description1 } from "../components";
+import {
+  HeroSlider,
+  Description0,
+  Description1,
+  Diagram,
+  Contact,
+} from "../components";
 
 type Section = {
   component: ReactNode;
@@ -10,6 +16,8 @@ const sections: Section[] = [
   { component: <HeroSlider /> },
   { component: <Description1 /> },
   { component: <Description0 /> },
+  { component: <Diagram /> },
+  { component: <Contact /> },
 ];
 
 const Landing = () => {
