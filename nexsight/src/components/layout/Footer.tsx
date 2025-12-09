@@ -34,6 +34,7 @@ type SocialLink = {
   src: string;
   alt: string;
   height: number;
+  href: string;
 };
 
 const footerLinks: FooterLink[] = [
@@ -44,10 +45,15 @@ const footerLinks: FooterLink[] = [
 ];
 
 const socialLinks: SocialLink[] = [
-  { alt: "linkedin", src: linkedinIcon, height: 30 },
-  { alt: "instagram", src: instagramIcon, height: 20 },
-  { alt: "telegram", src: telegramIcon, height: 20 },
-  { alt: "aparat", src: aparatIcon, height: 25 },
+  { alt: "linkedin", src: linkedinIcon, height: 30, href: "" },
+  { alt: "instagram", src: instagramIcon, height: 20, href: "" },
+  { alt: "telegram", src: telegramIcon, height: 20, href: "" },
+  {
+    alt: "aparat",
+    src: aparatIcon,
+    height: 25,
+    href: "https://www.aparat.com/Nexsaman",
+  },
 ];
 
 const Footer = () => {
@@ -126,7 +132,13 @@ const Footer = () => {
               </Box>
               <Box>
                 {socialLinks.map((item, i) => (
-                  <IconButton key={i} size="small" sx={{ mr: 1 }}>
+                  <IconButton
+                    key={i}
+                    size="small"
+                    sx={{ mr: 1 }}
+                    component="a"
+                    href={item.href}
+                  >
                     <img src={item.src} height={item.height} />
                   </IconButton>
                 ))}

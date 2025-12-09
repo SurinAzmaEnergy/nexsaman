@@ -6,6 +6,7 @@ import {
   Description1,
   Diagram,
   Contact,
+  Media,
 } from "../components";
 
 type Section = {
@@ -17,6 +18,7 @@ const sections: Section[] = [
   { component: <Description1 /> },
   { component: <Description0 /> },
   { component: <Diagram /> },
+  { component: <Media /> },
   { component: <Contact /> },
 ];
 
