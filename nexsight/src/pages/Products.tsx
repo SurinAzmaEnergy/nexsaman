@@ -566,48 +566,15 @@ const ProductList = () => {
         </Grid>
       </CustomTabPanel>
       <CustomTabPanel value={tabValue} index={1}>
-        <Grid
-          container
-          spacing={2}
+        <Box
           sx={{
+            display: "flex",
+            flexDirection: "column",
             justifyContent: "center",
-            alignItems: "stretch",
+            alignItems: "center",
+            gap: 3,
           }}
         >
-          {softwares.map((item, i) => (
-            <Grid key={i} size={{ xs: 12, sm: 6, md: 3 }}>
-              <Card
-                variant="outlined"
-                sx={{
-                  bgcolor: "darkgray",
-                  height: "100%",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-between",
-                }}
-              >
-                <CardMedia component="img" height="200" image={item.image} />
-                <Box
-                  sx={{
-                    height: "250",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "space-between",
-                    flex: 1,
-                  }}
-                >
-                  <CardContent>
-                    <Typography variant="body2" color="black" gutterBottom>
-                      {item.label}
-                    </Typography>
-                    <Typography variant="body2" color="#222">
-                      {item.description}
-                    </Typography>
-                  </CardContent>
-                </Box>
-              </Card>
-            </Grid>
-          ))}
           <CustomButton
             variant="contained"
             color="secondary"
@@ -615,7 +582,57 @@ const ProductList = () => {
           >
             دریافت کاتالوگ
           </CustomButton>
-        </Grid>
+          <Grid
+            container
+            spacing={2}
+            sx={{
+              justifyContent: "center",
+              alignItems: "stretch",
+            }}
+          >
+            {softwares.map((item, i) => (
+              <Grid key={i} size={{ xs: 12, sm: 6, md: 3 }}>
+                <Card
+                  variant="outlined"
+                  sx={{
+                    bgcolor: "darkgray",
+                    height: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <CardMedia component="img" height="200" image={item.image} />
+                  <Box
+                    sx={{
+                      height: "250",
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "space-between",
+                      flex: 1,
+                    }}
+                  >
+                    <CardContent>
+                      <Typography variant="body2" color="black" gutterBottom>
+                        {item.label}
+                      </Typography>
+                      <Typography variant="body2" color="#222">
+                        {item.description}
+                      </Typography>
+                    </CardContent>
+                  </Box>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+          <CustomButton
+            variant="contained"
+            color="secondary"
+            rightIcon={FileDownloadOutlined}
+          >
+            دریافت کاتالوگ
+          </CustomButton>
+        </Box>
       </CustomTabPanel>
       <Toolbar variant="dense" />
     </Container>

@@ -92,8 +92,9 @@ const Media = () => {
           }}
         >
           <Tab label="معرفی AI bridge EdgeDx" {...a11yProps(0)} />
-          <Tab label="ویدیو دوم" {...a11yProps(1)} />
-          <Tab label="ویدیو سوم" {...a11yProps(2)} />
+          <Tab label="تشخیص اختلاف سرعت" {...a11yProps(1)} />
+          <Tab label="تشخیص توقف و ادامه حرکت" {...a11yProps(2)} />
+          <Tab label="حصار مجازی" {...a11yProps(3)} />
         </Tabs>
         <Box
           sx={{
@@ -109,8 +110,30 @@ const Media = () => {
               style={{ width: "100%" }}
             />
           </TabPanel>
-          <TabPanel value={value} index={1}></TabPanel>
-          <TabPanel value={value} index={2}></TabPanel>
+          <TabPanel value={value} index={1}>
+            <video
+              src="/assets/video02.mp4"
+              controls
+              muted
+              style={{ width: "100%" }}
+            />
+          </TabPanel>
+          <TabPanel value={value} index={2}>
+            <video
+              src="/assets/video03.mp4"
+              controls
+              muted
+              style={{ width: "100%" }}
+            />
+          </TabPanel>
+          <TabPanel value={value} index={3}>
+            <video
+              src="/assets/video04.mp4"
+              controls
+              muted
+              style={{ width: "100%" }}
+            />
+          </TabPanel>
         </Box>
       </Card>
 
